@@ -8,7 +8,7 @@ logging.basicConfig(
 )
 
 # Disk usage alert threshold
-THRESHOLD = 80.0
+THRESHOLD = 80
 
 
 def check_disk_usage(path: str = "/") -> None:

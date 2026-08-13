@@ -1,4 +1,4 @@
-# disk.py disk.sh
+# disk.py / disk.sh
 
 ## Function
 Check local filesystem disk usage, print disk statistics, and trigger alert when usage exceeds the threshold. （Default alert threshold: 80%）

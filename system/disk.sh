@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Disk usage alert threshold
-THRESHOLD=80
+THRESHOLD=80.0
 
 # Check disk usage
 df_output=$(df -P / | tail -n 1)
@@ -22,6 +22,6 @@ echo "Used:  ${used_gb} GB"
 echo "Free:  ${free_gb} GB"
 echo "Usage: ${usage_percent}%"
 
-if [ "$usage_percent" -ge "$THRESHOLD" ]; then
-    echo "WARNING: Disk usage over threshold ${THRESHOLD}%!"
+if (( $(echo "$usage_percent $THRESHOLD" | awk '{if ($1 > $2) print 1; else print 0}') == 1 )); then
+    echo "WARNING: Disk usage over threshold $THRESHOLD%"
 fi
