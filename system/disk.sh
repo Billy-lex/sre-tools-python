@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Disk usage alert threshold
+set -euo pipefail
+
 THRESHOLD=80.0
 
-# Check disk usage
 df_output=$(df -P / | tail -n 1)
 
 # Extract values
