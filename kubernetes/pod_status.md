@@ -1,4 +1,4 @@
-# pod_status.py / pod_status.sh
+# pod_status.py / pod_status.sh / pod_status.ps1
 
 ## Function
 
@@ -14,6 +14,7 @@ Check the status of Kubernetes pods in one or all namespaces and alert on pods t
 * Return meaningful exit codes
 * Python implementation for infrastructure automation
 * Bash implementation for convenient execution
+* PowerShell implementation for Windows environments
 
 ## Usage
 
@@ -21,6 +22,11 @@ Check the status of Kubernetes pods in one or all namespaces and alert on pods t
 python3 kubernetes/pod_status.py kube-system
 python3 kubernetes/pod_status.py              # all namespaces
 ./kubernetes/pod_status.sh kube-system
+```
+
+```powershell
+.\kubernetes\pod_status.ps1 kube-system
+.\kubernetes\pod_status.ps1                   # all namespaces
 ```
 
 ## Example

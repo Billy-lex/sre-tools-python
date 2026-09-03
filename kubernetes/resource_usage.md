@@ -1,4 +1,4 @@
-# resource_usage.py / resource_usage.sh
+# resource_usage.py / resource_usage.sh / resource_usage.ps1
 
 ## Function
 
@@ -14,6 +14,7 @@ Check Kubernetes CPU and memory usage via `kubectl top` and alert when usage per
 * Return meaningful exit codes
 * Python implementation for infrastructure automation
 * Bash implementation for convenient execution
+* PowerShell implementation for Windows environments
 
 ## Usage
 
@@ -22,6 +23,12 @@ python3 kubernetes/resource_usage.py
 python3 kubernetes/resource_usage.py --pods production
 python3 kubernetes/resource_usage.py --threshold 90
 ./kubernetes/resource_usage.sh --pods --threshold 90
+```
+
+```powershell
+.\kubernetes\resource_usage.ps1
+.\kubernetes\resource_usage.ps1 -pods production
+.\kubernetes\resource_usage.ps1 -pods -threshold 90
 ```
 
 ## Example

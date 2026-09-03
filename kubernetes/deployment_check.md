@@ -1,4 +1,4 @@
-# deployment_check.py / deployment_check.sh
+# deployment_check.py / deployment_check.sh / deployment_check.ps1
 
 ## Function
 
@@ -14,6 +14,7 @@ Check Kubernetes deployment replica readiness by comparing desired replicas with
 * Return meaningful exit codes
 * Python implementation for infrastructure automation
 * Bash implementation for convenient execution
+* PowerShell implementation for Windows environments
 
 ## Usage
 
@@ -21,6 +22,11 @@ Check Kubernetes deployment replica readiness by comparing desired replicas with
 python3 kubernetes/deployment_check.py production
 python3 kubernetes/deployment_check.py        # all namespaces
 ./kubernetes/deployment_check.sh production
+```
+
+```powershell
+.\kubernetes\deployment_check.ps1 production
+.\kubernetes\deployment_check.ps1             # all namespaces
 ```
 
 ## Example

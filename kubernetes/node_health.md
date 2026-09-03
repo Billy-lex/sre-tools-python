@@ -1,4 +1,4 @@
-# node_health.py / node_health.sh
+# node_health.py / node_health.sh / node_health.ps1
 
 ## Function
 
@@ -13,12 +13,17 @@ Check the health of Kubernetes cluster nodes, including Ready status and resourc
 * Return meaningful exit codes
 * Python implementation for infrastructure automation
 * Bash implementation for convenient execution
+* PowerShell implementation for Windows environments
 
 ## Usage
 
 ```bash
 python3 kubernetes/node_health.py
 ./kubernetes/node_health.sh
+```
+
+```powershell
+.\kubernetes\node_health.ps1
 ```
 
 ## Example

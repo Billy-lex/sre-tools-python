@@ -1,4 +1,4 @@
-# tcp_ping.py / tcp_ping.sh
+# tcp_ping.py / tcp_ping.sh / tcp_ping.ps1
 
 ## Function
 Perform TCP ping to a target host:port, measuring connection latency over multiple rounds. Reports per-round latency and summary statistics (min/avg/max/loss).
@@ -9,10 +9,16 @@ Perform TCP ping to a target host:port, measuring connection latency over multip
 - Per-round latency measurement
 - Packet loss statistics
 - Min/avg/max latency summary
+- PowerShell implementation for Windows environments
 
 ## Usage
 ```bash
 python3 networking/tcp_ping.py <host> [port] [count]
 python3 networking/tcp_ping.py example.com 443 10
 ./networking/tcp_ping.sh <host> [port] [count]
+```
+
+```powershell
+.\networking\tcp_ping.ps1 example.com
+.\networking\tcp_ping.ps1 example.com 443 10
 ```

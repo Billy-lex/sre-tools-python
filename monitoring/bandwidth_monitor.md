@@ -1,4 +1,4 @@
-# bandwidth_monitor.py / bandwidth_monitor.sh
+# bandwidth_monitor.py / bandwidth_monitor.sh / bandwidth_monitor.ps1
 
 ## Function
 Monitor real-time network bandwidth usage on a specified interface. Samples RX/TX throughput at configurable intervals and displays rates in human-readable format.
@@ -9,10 +9,13 @@ Monitor real-time network bandwidth usage on a specified interface. Samples RX/T
 - Human-readable rate formatting (B/s, KB/s, MB/s, GB/s)
 - Interface state validation
 - Read from /sys/class/net statistics (no external dependencies)
+- PowerShell implementation for Windows environments
 
 ## Usage
 ```bash
 python3 monitoring/bandwidth_monitor.py <interface> [interval] [count]
 python3 monitoring/bandwidth_monitor.py eth0 5 10
 ./monitoring/bandwidth_monitor.sh <interface> [interval] [count]
+.\monitoring\bandwidth_monitor.ps1 <interface> [interval] [count]
+.\monitoring\bandwidth_monitor.ps1 Ethernet 5 10
 ```

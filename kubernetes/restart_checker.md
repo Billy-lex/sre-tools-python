@@ -1,4 +1,4 @@
-# restart_checker.py / restart_checker.sh
+# restart_checker.py / restart_checker.sh / restart_checker.ps1
 
 ## Function
 
@@ -14,6 +14,7 @@ Check Kubernetes pod restart counts and alert on pods whose total restart count 
 * Return meaningful exit codes
 * Python implementation for infrastructure automation
 * Bash implementation for convenient execution
+* PowerShell implementation for Windows environments
 
 ## Usage
 
@@ -21,6 +22,11 @@ Check Kubernetes pod restart counts and alert on pods whose total restart count 
 python3 kubernetes/restart_checker.py kube-system
 python3 kubernetes/restart_checker.py --threshold 10
 ./kubernetes/restart_checker.sh kube-system --threshold 10
+```
+
+```powershell
+.\kubernetes\restart_checker.ps1 kube-system
+.\kubernetes\restart_checker.ps1 kube-system -threshold 10
 ```
 
 ## Example

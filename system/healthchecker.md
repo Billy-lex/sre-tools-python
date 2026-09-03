@@ -1,4 +1,4 @@
-# health_checker.py / health_checker.sh
+# health_checker.py / health_checker.sh / healthchecker.ps1
 
 ## Function
 
@@ -16,12 +16,14 @@ Check the health status of specified Linux systemd services and report whether e
 * Support command-line service arguments
 * Python implementation for infrastructure automation
 * Bash wrapper for convenient execution
+* PowerShell implementation for Windows environments
 
 ## Usage
 
 ```bash
 python3 system/health_checker.py sshd chronyd rsyslog
 ./system/health_checker.sh sshd chronyd rsyslog
+.\system\healthchecker.ps1 sshd chronyd rsyslog
 ```
 
 ## Example

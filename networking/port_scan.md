@@ -1,4 +1,4 @@
-# port_scan.py / port_scan.sh
+# port_scan.py / port_scan.sh / port_scan.ps1
 
 ## Function
 Scan TCP ports on a target host to check which ones are open. Supports scanning a default list of common ports or user-specified ports.
@@ -10,6 +10,7 @@ Scan TCP ports on a target host to check which ones are open. Supports scanning 
 - Service name resolution for open ports
 - Host resolution validation
 - Configurable timeout
+- PowerShell implementation for Windows environments
 
 ## Usage
 ```bash
@@ -17,4 +18,9 @@ python3 networking/port_scan.py <host>
 python3 networking/port_scan.py <host> 22,80,443
 ./networking/port_scan.sh <host>
 ./networking/port_scan.sh <host> 22,80,443
+```
+
+```powershell
+.\networking\port_scan.ps1 example.com
+.\networking\port_scan.ps1 example.com 22,80,443
 ```
