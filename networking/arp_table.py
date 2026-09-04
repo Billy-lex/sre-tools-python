@@ -44,7 +44,8 @@ def main() -> None:
     logging.info(f"  {'-'*18} {'-'*20} {'-'*12} {'-'*6}")
 
     for entry in entries:
-        flags = "complete" if entry["flags"] == "0x2" else f"0x{entry['flags']}"
+        # flags already include the "0x" prefix in /proc/net/arp
+        flags = "complete" if entry["flags"] == "0x2" else entry["flags"]
         logging.info(
             f"  {entry['ip']:<18} {entry['mac']:<20} {entry['device']:<12} {flags}"
         )
