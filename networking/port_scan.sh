@@ -21,9 +21,9 @@ echo "Scanning $host ..."
 open_count=0
 
 for port in "${ports[@]}"; do
-    if (echo >/dev/tcp/"$host"/"$port") 2>/dev/null; then
+    if timeout "$TIMEOUT" bash -c 'exec 3<>/dev/tcp/$1/$2' _ "$host" "$port" 2>/dev/null; then
         echo "  PORT ${port}/tcp  OPEN"
-        ((open_count++))
+        open_count=$((open_count + 1))
     fi
 done
 
